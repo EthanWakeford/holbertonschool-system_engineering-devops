@@ -9,6 +9,7 @@ add_header="\tlocation / {\n\t\tadd_header X-Served-By "$HOSTNAME";"
 sudo apt-get -y update
 sudo apt-get -y upgrade
 sudo apt-get install -y nginx
+sudo ufw allow 'Nginx-HTTP'
 sudo rm /var/www/html/*.html
 sudo echo "Hello World" | sudo tee /var/www/html/index.html
 sudo echo "Ceci n'est pas une page" | sudo tee /var/www/html/error404.html
